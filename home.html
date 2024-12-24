@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sridevi Sathyamoorthy - Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    header {
+      width: 100%;
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+    }
+    header div {
+      font-size: 1.2em;
+      margin-right: 30px;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 120px; /* Space for the fixed header */
+      width: 100%;
+    }
+    .card {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row-reverse; /* Change flex-direction to row-reverse */
+      border: 2px solid #333;
+      border-radius: 10px;
+      padding: 40px;
+      width: 90%; /* Increased card width */
+      max-width: 1200px; /* Adjust max-width */
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+    .card h1 {
+      margin: 0;
+      font-size: 2.5em; /* Increased font size for the title */
+    }
+    .card pre {
+      font-size: 1.4em; /* Increased font size */
+      margin: 20px 0;
+      flex: 1;
+      line-height: 1.6; /* Adjusted line height for readability */
+    }
+    .profile-image img {
+      width: 220px; /* Increased image size */
+      height: 220px; /* Increased image size */
+      border-radius: 50%;
+      border: 2px solid #333;
+      margin-left: 30px; /* Increased space between image and text */
+    }
+    .circle-nav {
+      display: flex;
+      justify-content: center;
+      gap: 50px; /* Increased space between circles */
+      margin-top: 50px;
+    }
+    .circle-nav div {
+      width: 100px; /* Increased circle size */
+      height: 100px; /* Increased circle size */
+      background-color: #333;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      cursor: pointer;
+      font-size: 1.2em; /* Adjusted font size for larger circles */
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      width: 100%;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+    section {
+      padding: 100px 20px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    /* Carousel Styles */
+    .carousel-container {
+      width: 80%;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-item {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+      background-color: #fff;
+      border: 2px solid #333;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .carousel-item img {
+      width: 500px;
+      height: 300px;
+      border-radius: 10px;
+    }
+    .carousel-item h3 {
+      margin: 20px 0 10px;
+      font-size: 1.8em;
+    }
+    .carousel-item p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+    .carousel-control {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 2em;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .prev {
+      left: 0;
+    }
+    .next {
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sridevi Sathyamoorthy</h1>
+    <div>Insight Architect</div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <div class="profile-description">
+        <h1>Sridevi Sathyamoorthy Here!</h1>
+        <pre>
+          Data scientist by day, coffee enthusiast by night
+          I wrangle data and untangle insights
+          Passionate about time series analysis and forecasting — predicting the 
+          future with data and finding patterns in chaos (aka 'my-life')...
+          
+          Let's make sense of the numbers!
+        </pre>
+      </div>
+      <div class="profile-image">
+        <img src="sphoto.jpg" alt="Profile Image">
+      </div>
+    </div>
+  </div>
+
+  <div class="circle-nav">
+    <div onclick="window.location.href='#projects'">Projects</div>
+    <div onclick="window.location.href='#experience'">Experience</div>
+    <div onclick="window.location.href='#contact'">Contact</div>
+  </div>
+
+  <!-- Projects Section with Carousel -->
+  <section id="projects">
+    <h2>Projects</h2>
+    
+    <!-- Carousel Container -->
+    <div class="carousel-container">
+        <div class="carousel" id="carousel">
+          <div class="carousel-item" onclick="window.location.href='project1.html'">
+            <img src="sphoto.jpg" alt="Project 1">
+            <h3>Time Series Analysis and Forecasting</h3>
+            <p>Detailed description of Project 1 goes here.</p>
+          </div>
+          <div class="carousel-item" onclick="window.location.href='project2.html'">
+            <img src="sphoto.jpg" alt="Project 2">
+            <h3>Exploratory Data Analysis - EDA</h3>
+            <p>Detailed description of Project 2 goes here.</p>
+          </div>
+          <div class="carousel-item" onclick="window.location.href='project3.html'">
+            <img src="sphoto.jpg" alt="Project 3">
+            <h3>Natural Language Processing - NLP</h3>
+            <p>Detailed description of Project 3 goes here.</p>
+          </div>
+        </div>
+      
+        <!-- Carousel Controls -->
+        <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+      </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Sridevi Sathyamoorthy</p>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+
+    function nextSlide() {
+      const carousel = document.getElementById("carousel");
+      const totalSlides = document.querySelectorAll(".carousel-item").length;
+      if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+      } else {
+        currentSlide = 0; // Loop back to the first slide
+      }
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      const carousel = document.getElementById("carousel");
+      const totalSlides = document.querySelectorAll(".carousel-item").length;
+      if (currentSlide > 0) {
+        currentSlide--;
+      } else {
+        currentSlide = totalSlides - 1; // Loop back to the last slide
+      }
+      updateCarousel();
+    }
+
+    function updateCarousel() {
+      const carousel = document.getElementById("carousel");
+      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+  </script>
+
+</body>
+</html>
